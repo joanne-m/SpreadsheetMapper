@@ -1,0 +1,8 @@
+mapfile : mapping.xlsx
+mapsheet : ~
+
+inputfile: input.csv
+inputsheet: ~
+
+outputfile: output.xlsx
+outputsheet: ~

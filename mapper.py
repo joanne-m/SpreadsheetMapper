@@ -44,11 +44,11 @@ class Mapper():
         mappingdf = self.__opendataframe(mapfile,mapsheet )
 
         # Disregard fields with no mapping
-        self.mappingdf = mappingdf[mappingdf['to'].notna()]
+        self.mappingdf = mappingdf[mappingdf['to'].notna() & mappingdf['from'].notna()]
         print("\nMapping the following fields (based on "+mapfile+"):")
         print(self.mappingdf[['from', 'to']])
 
-    def convert(self, inputfile = None, inputsheet = None, outputsheet = None, outputfile = None):
+    def convert(self, inputfile = None, inputsheet = None, outputfile = None, outputsheet = None):
         ''' Main function. Maps input file's columns to output file's using previously set mappings.
         '''
         inputfile = self.config['inputfile'] if inputfile is None else inputfile

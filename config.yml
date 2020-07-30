@@ -1,8 +1,9 @@
-mapfile : mapping.xlsx
-mapsheet : ~
+mapfile : mapping.xlsx  # Filename of mapping spreadsheet. Should contain at least two headers: "from", which contains headers in input file, 
+                        # and "to", which is the corresponding header in the output file. Unmapped columns in "from" are disregarded.
+mapsheet : ~            # (optional) Specific sheet within the mapfile containing the mapping. If set to null, will default to first sheet.
 
-inputfile: input.csv
-inputsheet: ~
+inputfile: input.csv    # Filename of input spreadsheet. Headers should correspond to headers in mapfile's "from" column.
+inputsheet: ~           # (optional) Specific sheet within the inputfile containing the mapping. If set to null, will default to first sheet.
 
-outputfile: output.xlsx
-outputsheet: ~
+outputfile: output.xlsx # Filename of input spreadsheet. Resulting headers would correspond to headers in mapfile's "to" column.
+outputsheet: ~          # (optional) Specific sheet within the inputfile containing the mapping. If set to null, will default to first sheet.

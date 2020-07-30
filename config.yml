@@ -7,3 +7,5 @@ inputsheet: ~           # (optional) Specific sheet within the inputfile contain
 
 outputfile: output.xlsx # Filename of input spreadsheet. Resulting headers would correspond to headers in mapfile's "to" column.
 outputsheet: ~          # (optional) Specific sheet within the inputfile containing the mapping. If set to null, will default to first sheet.
+
+date_format: mm/dd/yyyy # Date and datetime format for output file.

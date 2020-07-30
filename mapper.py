@@ -66,10 +66,11 @@ class Mapper():
         # Replace column headers according to mapping.
         outdf.columns = self.mappingdf['to']
 
+        date_format = self.config['date_format'] if ('date_format' in self.config and self.config['date_format']) else 'mm/dd/yyyy'
+
         # Write output data to an excel file
-        writer = pd.ExcelWriter(outputfile, engine='xlsxwriter')
+        writer = pd.ExcelWriter(outputfile, engine='xlsxwriter', date_format = date_format, datetime_format=date_format)
         outdf.to_excel(writer, outputsheet, index=False)
         writer.save()
 
         print('\nSuccessfully mapped', inputfile, 'to', outputfile+'.')
-

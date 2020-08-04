@@ -7,5 +7,7 @@ inputsheet: ~           # (optional) Specific sheet within the inputfile contain
 
 outputfile: output.xlsx # Filename of input spreadsheet. Resulting headers would correspond to headers in mapfile's "to" column.
 outputsheet: ~          # (optional) Specific sheet within the inputfile containing the mapping. If set to null, will default to first sheet.
+include_unmapped: False # (optional) False by default, which means that only fields with mappings are included in the output file. 
+                        # If set to True, all fields in "to" are included in the output file (with unmapped fields set to empty).
 
 date_format: mm/dd/yyyy # Date and datetime format for output file.
